@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Trash from "../icons/Trash";
+import { setNewOffset, autoGrow, setZIndex } from "../utils.js";
 
 /* eslint-disable react/prop-types */
 const NoteCard = ({ note }) => {
@@ -17,13 +18,8 @@ const NoteCard = ({ note }) => {
     autoGrow(textAreaRef);
   }, []);
 
-  const autoGrow = (textArea) => {
-    const { current } = textAreaRef;
-    current.style.height = "auto"; // Reset the height
-    current.style.height = current.scrollHeight + "px";
-  };
-
   const mouseDown = (e) => {
+    setZIndex(cardRef.current);
     mouseStartPos.x = e.clientX;
     mouseStartPos.y = e.clientY;
 
@@ -47,11 +43,13 @@ const NoteCard = ({ note }) => {
     mouseStartPos.x = e.clientX;
     mouseStartPos.y = e.clientY;
 
+    const newPosition = setNewOffset(cardRef.current, mouseMoveDir);
+    setPosition(newPosition);
     //3 - Update card top and left position.
-    setPosition({
-      x: cardRef.current.offsetLeft - mouseMoveDir.x,
-      y: cardRef.current.offsetTop - mouseMoveDir.y,
-    });
+    // setPosition({
+    //   x: cardRef.current.offsetLeft - mouseMoveDir.x,
+    //   y: cardRef.current.offsetTop - mouseMoveDir.y,
+    // });
   };
 
   return (
@@ -74,6 +72,9 @@ const NoteCard = ({ note }) => {
 
       <div className="card-body">
         <textarea
+          onFocus={() => {
+            setZIndex(cardRef.current);
+          }}
           ref={textAreaRef}
           style={{ color: colors.colorText }}
           defaultValue={body}
