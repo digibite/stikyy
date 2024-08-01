@@ -1,6 +1,6 @@
 export const fakeData = [
   {
-    $id: 1,
+    id: 1,
     body: JSON.stringify(
       'Resources:\n- Book: "You Don\'t Know JS: Scope & Closures" by Kyle Simpson.\n\n- Online Course: "JavaScript Patterns" on Udemy.\n\n- Articles:\n"Understanding JavaScript Closures" on Medium.\n\n"Mastering JavaScript Modules" on Dev.to.'
     ),
@@ -11,9 +11,11 @@ export const fakeData = [
       colorText: "#18181A",
     }),
     position: JSON.stringify({ x: 15, y: 10 }),
+    user_id: 1, // Assuming you have a user_id available
+    title: null, // Assuming title is optional and setting it to null
   },
   {
-    $id: 2,
+    id: 2,
     body: JSON.stringify(
       'Resources:\n- Book: "You Don\'t Know JS: Scope & Closures" by Kyle Simpson.\n\n- Online Course: "JavaScript Patterns" on Udemy.\n\n- Articles:\n"Understanding JavaScript Closures" on Medium.\n\n"Mastering JavaScript Modules" on Dev.to.'
     ),
@@ -24,9 +26,11 @@ export const fakeData = [
       colorText: "#18181A",
     }),
     position: JSON.stringify({ x: 505, y: 10 }),
+    user_id: 1, // Assuming you have a user_id available
+    title: null, // Assuming title is optional and setting it to null
   },
   {
-    $id: 3,
+    id: 3,
     body: JSON.stringify(
       'Resources:\n- Book: "You Don\'t Know JS: Scope & Closures" by Kyle Simpson.\n\n- Online Course: "JavaScript Patterns" on Udemy.\n\n- Articles:\n"Understanding JavaScript Closures" on Medium.\n\n"Mastering JavaScript Modules" on Dev.to.'
     ),
@@ -37,5 +41,7 @@ export const fakeData = [
       colorText: "#18181A",
     }),
     position: JSON.stringify({ x: 15, y: 500 }),
+    user_id: 1, // Assuming you have a user_id available
+    title: null, // Assuming title is optional and setting it to null
   },
 ];
