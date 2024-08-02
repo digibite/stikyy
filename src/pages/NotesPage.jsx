@@ -31,7 +31,7 @@ const NotesPage = () => {
         headers: {
           "Content-Type": "application/json",
           "x-access-token":
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzIyNDAxMjg0LCJleHAiOjE3MjI0ODc2ODR9.xFw_n_oJhiSL-Gy8AxVx-QN6JwZ7AhVkZolrytvT2Xc",
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzIyNTQ2NzA4LCJleHAiOjE3MjI2MzMxMDh9.omJSz42_plw1KhaE5ZwTHcTNAG2_Z3Dx9QFx1l9iNAI",
           // "x-access-token": localStorage.getItem("token"), // Assuming you store JWT in localStorage
         },
       })
